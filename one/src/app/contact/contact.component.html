@@ -1,0 +1,29 @@
+
+<html>
+    <body bgcolor="#E6E6FA">
+    
+   
+    </body>
+
+<div>
+    <h1>
+        Pipe Assignment
+      </h1>
+      <div>
+          <label>Enter your Name: </label><input #name (keyup)="change(name.value)" type="text">
+          <p>In lower case: {{value | lowercase}}
+          <p>In upper case: {{value | uppercase}}
+        </div>
+        <div>
+            <label> Amount: 500 </label>
+            <button (click)="toggleINRandUSD()">Toggle Currency</button>
+           <label >Amount is {{ amount | currency : format}}</label>
+         </div>
+         <p>The  birthday is 4/15/1998</p>
+         <button (click)="toggleFormat_date()">Toggle Format</button>
+         <p>The  birthday is {{ birthday | date:format_date }}</p>
+        </div>
+
+    </html>
+    
+
